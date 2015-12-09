@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+
+
+{% block homepage %}
+<nav id="mainNav" class="navbar navbar-default navbar-fixed-top no-border">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand page-scroll" href="/">getdelicious</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a class="page-scroll" href="{% url 'about' %}">About</a>
+                </li>
+<!--                 <li>
+                    <a class="page-scroll" href="{% url 'ideas' %}">Ideas</a>
+                </li> -->
+                <li>
+                    <a class="page-scroll" href="{% url 'faq' %}">FAQ</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="{% url 'terms' %}">Terms</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="{% url 'privacy' %}">Privacy</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="{% url 'contact' %}">Contact</a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/getdeliciousAU" target="_blank"><i class="fa fa-twitter fa-2x" style="color:#4099ff;"></i></a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/getdeliciousAU" target="_blank"><i class="fa fa-facebook fa-2x" style="color:#3b5998;"></i></a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+
+<header>
+    <div class="header-content">
+        <div class="header-content-inner">
+
+          <!-- ALERT MESSAGES -->
+            <div class="container-fluid">
+            {% if messages %}
+                {% for message in messages %}
+                <div class='alert {% if "success" in message.tags %}alert-success{% elif "warning" in message.tags%}alert-warning{% elif "error" in message.tags %}alert-danger{% endif %} alert-dismissible' role='alert'>
+                <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                {% if "safe" in message.tags %}{{ message|safe }}{% else %}{{ message }}{% endif %}
+                </div>
+                {% endfor %}
+            {% endif %}
+            </div>
+          <!-- END ALERT MESSAGES -->
+          
+            <h1><span style="font-size: 60px;">Food truck catering, yeah!</span></h1>
+            <hr class="white">
+            <p><span class="text-emphasis">compare</span> packages and <span class="text-emphasis">choose</span> that <span class="text-emphasis">perfect caterer</span><br>for your wedding, birthday or corporate event</p>
+        </div>
+        <div class="header-content-inner">
+            <div class="btn-group"> <a class="btn btn-default dropdown-toggle btn-select no-border-radius padding" data-toggle="dropdown" href="#">Select Your State <span class="caret"></span></a>
+	            <ul class="dropdown-menu width">
+	            	<li class="dropdown-header">AVAILABLE IN:</li>
+	                <li><a href="{% url 'victoria' %}">Victoria</a></li>
+	                <li><a href="{% url 'south_australia' %}">South Australia</a></li>
+	                <li><a href="{% url 'western_australia' %}">Western Australia</a></li>
+                    <li><a href="{% url 'new_south_wales' %}">New South Wales</a></li>
+	                <li class="divider"></li>
+	                <li class="dropdown-header">COMING TO:</li>
+	                
+	                <li><a style="color: rgba(0,0,0,.5)">Queensland</a></li>
+	            </ul>
+	        </div>
+	    </div>
+	    <br>
+	    <hr class="white">
+	    <br>
+	    <div class="header-content-inner">
+            <a href="{% url 'owners' %}" class="btn btn-primary2 btn-xl page-scroll">Food truck owner?</a>
+        </div>
+    </div>
+</header>
+
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block navbar %}
+
+    {% include "navbar.html" %}
+
+{% endblock %}
+
+{% block content %}
+
+<section id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+                <h4 class="text-muted"><em>{{ quote }}</em></h4>
+                <h2 class="section-heading logo-font">getdelicious</h2>
+                <hr class="primary">
+                <p><span class="logo-font">getdelicious</span> is created by a bunch of foodies with a passion on well, food!</p>
+                <p>We work along side amazing food truck owners to create a seamless and transparent process to book a food truck.</p>
+                <p><span class="logo-font">getdelicious</span> is proudly made in Melbourne</p>
+            </div>
+        </div>
+    </div>    
+</section>
+
+{% endblock %}

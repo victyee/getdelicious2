@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% block navbar %}
+
+    {% include "navbar.html" %}
+
+{% endblock %}
+
+{% block content %}
+
+<section id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+                <h2 class="section-heading">What is <span class="logo-font">getdelicious</span></h2>
+                <p><span class="logo-font">getdelicious</span> is an online food truck directory. We list catering packages of food trucks Australia wide. All packages are updated by it's individual food truck operators</p>
+                <hr class="primary">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+                <h2 class="section-heading">What sort of events do food trucks cater for?</h2>
+                <p>Any! Our food trucks are happy to cater for any event. Popular choices includes weddings, birthday
+                        parties, corporate events, and all sorts of private events</p>
+                <hr class="primary">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+                <h2 class="section-heading">Can I customise the food packages?</h2>
+                <p>Absolutely! Our food truck operators welcomes your call and more than happy to work out a package that suits you</p>
+                <hr class="primary">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+                <h2 class="section-heading">Nothing is showing up in my state</h2>
+                <p>Bummer, check back later or <a href="{% url 'contact' %}">send</a> us what you're after and we'll help you out!</p>
+                <hr class="primary">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+                <h2 class="section-heading">How do I get my food truck menu listed?</h2>
+                <p>Simply <a href="#">submit a request</a></p>
+                <hr class="primary">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+                <h2 class="section-heading">Any fees/charges to list my food truck?</h2>
+                <p>Not at all, it's completely free!</p>
+                <hr class="primary">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+                <h2 class="section-heading">I've updated my catering packages</h2>
+                <p>Email the changes to us at hey.getdelicious@gmail.com</p>
+                <hr class="primary">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+                <h2 class="section-heading">Best way to get in touch?</h2>
+                <p><a href="{% url 'contact' %}">Contact us </a>or shoot us an email at hey.getdelicious@gmail.com</p>
+                <hr class="primary">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+                <h2 class="section-heading">Nice background photo!</h2>
+                <p>Credits to Justin Lee Photography</p>
+                <hr class="primary">
+            </div>
+        </div>
+    </div>
+</section>
+    
+{% endblock %}
